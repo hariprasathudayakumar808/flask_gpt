@@ -9,7 +9,7 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 print(openai.api_key)
 app = Flask(__name__)
 
-@app.route('/get_opinion', methods=['POST'])
+@app.route('/chat', methods=['POST'])
 def get_opinion():
     if request.method == 'POST':
         data = request.get_json()
